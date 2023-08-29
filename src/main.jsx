@@ -12,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root'))
     <React.StrictMode>
         {/*<HelloWorldApp/>*/}
         {/*<FirstApp/>*/}
-        <CounterApp value={"Carlos"}/>
+        {/*<CounterApp value={2}/>*/}
+        <CounterApp value={0}/>
     </React.StrictMode>
 );

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 export const CounterApp = ({ value }) => {
 
+  console.log('render');
+  // API... FETCH ... CUIDADO que cuando se dispara el estado afecta todo aca
 
   const [counter, setCounter] = useState(value);
 
@@ -10,6 +12,14 @@ export const CounterApp = ({ value }) => {
     //setCounter(counter + 1);
     //otra manera
     setCounter((c) => c + 1);
+  }
+
+  const handleSubtract = (event) => {
+    setCounter((c) => c - 1);
+  }
+
+  const handleReset = (event) => {
+    setCounter(value);
   }
 
 
@@ -21,9 +31,18 @@ export const CounterApp = ({ value }) => {
         +1
       </button>
 
-      <button onClick={(event) => handleAddArg(event, 'hola')}>
-        print console
+      <button onClick={handleSubtract}>
+        -1
       </button>
+
+      <button onClick={handleReset}>
+        Reset
+      </button>
+
+
+      {/*<button onClick={(event) => handleAddArg(event, 'hola')}>
+        print console
+      </button>*/}
     </>
   )
 }

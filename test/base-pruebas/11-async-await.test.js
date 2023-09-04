@@ -6,5 +6,6 @@ describe('Pruebas en 11-async-await', () => {
 
         const url = await getImagen();
         expect(typeof url).toBe('string');
-     })
- })
+        //expect(resp).toBe('No se encontro la imagen');
+    });
+ });
